@@ -26,14 +26,21 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Im Hero-Bereich: weiße Schrift auf Video. Nach Scroll: dunkle Schrift auf hellem Hintergrund
-  const isHeroArea = !scrolled;
+  // Im Hero-Bereich auf Desktop: weiße Schrift auf Video. Mobile immer dunkel.
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  const isHeroArea = !scrolled && !isMobile;
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+          scrolled || isMobile
             ? "bg-[#FFF8F1]/95 backdrop-blur-md border-b border-[#2F2A26]/5 shadow-sm"
             : "bg-transparent"
         }`}
