@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+/*
+ * DESIGN SYSTEM: Warm & Premium – DREWS CORDALIS PETRY
+ * Cremeweiß Basis + Korall Akzent + Goldgelb Highlight
+ * Fonts: Montserrat (headlines) + Inter (body)
+ *
+ * Palette:
+ * --bg:        #FFF8F1  (Cremeweiß)
+ * --surface:   #F6E7D8  (Sand/Champagner)
+ * --accent:    #E97A6A  (Korall/Rosé)
+ * --highlight: #F2C14E  (Goldgelb)
+ * --fresh:     #8ECFD1  (Türkis, sehr sparsam)
+ * --text:      #2F2A26  (Anthrazit)
+ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFF8F1;
+    color: #4a4440;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2F2A26;
+  }
+
+  ::selection {
+    background-color: rgba(233, 122, 106, 0.25);
+    color: #2F2A26;
+  }
+}
+
+@layer components {
+  .section-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #E97A6A, #F2C14E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #E97A6A, #e06b5a);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0.9375rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #f08878, #E97A6A);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(233, 122, 106, 0.3);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #2F2A26;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 0.9375rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #2F2A26/20;
+    border-color: rgba(47, 42, 38, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-secondary:hover {
+    border-color: #E97A6A;
+    color: #E97A6A;
+    background: rgba(233, 122, 106, 0.05);
+  }
+
+  /* Hero-spezifische Buttons (auf dunklem Video-Hintergrund) */
+  .btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #E97A6A, #e06b5a);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0.9375rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-hero-primary:hover {
+    background: linear-gradient(135deg, #f08878, #E97A6A);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(233, 122, 106, 0.4);
+  }
+
+  .btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 0.9375rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #E97A6A;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(47, 42, 38, 0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 12px rgba(47, 42, 38, 0.04);
+  }
+
+  .card:hover {
+    border-color: rgba(233, 122, 106, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(47, 42, 38, 0.08);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(233, 122, 106, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(233, 122, 106, 0.5);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
