@@ -104,10 +104,10 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative section-container text-center py-20 pt-24 md:py-32 md:pt-40">
+      <div className="relative section-container text-center py-12 pt-16 md:py-32 md:pt-40">
         <div className="max-w-3xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-4 py-1.5 mb-8">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-4 py-1.5 mb-4 md:mb-8">
             <span className="w-2 h-2 rounded-full bg-[#F2C14E] animate-pulse" />
             <span className="text-xs font-medium text-white/80 tracking-wide uppercase font-['Montserrat']">
               Live-Entertainment
@@ -115,14 +115,14 @@ export default function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] mb-6 tracking-tight text-white">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] mb-3 md:mb-6 tracking-tight text-white">
             {HERO.headline}
             <br />
             <span className="gold-gradient">{HERO.headlineAccent}</span>
           </h1>
 
           {/* Subline */}
-          <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mx-auto mb-10 font-light">
+          <p className="text-sm sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mx-auto mb-5 md:mb-10 font-light">
             {HERO.subline}
           </p>
 
