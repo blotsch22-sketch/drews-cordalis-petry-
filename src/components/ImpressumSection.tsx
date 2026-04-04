@@ -1,6 +1,6 @@
 /**
  * Impressum – Gesetzlich vorgeschriebene Anbieterkennzeichnung
- * Gemäß § 5 TMG
+ * Gemäß § 5 DDG
  */
 
 export default function ImpressumSection() {
@@ -24,10 +24,10 @@ export default function ImpressumSection() {
           </h2>
 
           <div className="space-y-10 text-[#2F2A26]/70 text-sm md:text-base leading-relaxed">
-            {/* Angaben gemäß § 5 TMG */}
+            {/* Angaben gemäß § 5 DDG */}
             <div>
               <h3 className="text-lg font-bold text-[#2F2A26] mb-3 font-['Montserrat']">
-                Angaben gemäß § 5 TMG
+                Angaben gemäß § 5 DDG
               </h3>
               <p className="font-semibold text-[#2F2A26]">FIESTA RECORDS GmbH</p>
               <p>Bonner Str. 324</p>
