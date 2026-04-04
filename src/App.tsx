@@ -9,7 +9,7 @@ import EventTypesSection from "./components/EventTypesSection";
 import BookingSection from "./components/BookingSection";
 import ImpressumSection from "./components/ImpressumSection";
 import DatenschutzSection from "./components/DatenschutzSection";
-import { ConsentProvider, CookieBanner } from "./components/CookieConsent";
+import { ConsentProvider } from "./components/CookieConsent";
 import Footer from "./components/Footer";
 import type { EventTypeValue } from "./data/content";
 
@@ -81,7 +81,6 @@ export default function App() {
       <div className="relative z-10">
         <Footer />
       </div>
-      <CookieBanner />
     </div>
     </ConsentProvider>
   );

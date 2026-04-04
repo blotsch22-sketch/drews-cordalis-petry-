@@ -211,13 +211,6 @@ export default function BookingSection({ selectedEventType = "", onEventTypeChan
               </div>
             ))}
 
-            {/* Additional Info */}
-            <div className="p-5 rounded-xl bg-[#F2C14E]/10 border border-[#F2C14E]/20">
-              <p className="text-sm text-[#2F2A26]/50 leading-relaxed">
-                <strong className="text-[#E97A6A]">Schnellanfrage?</strong>{" "}
-                Schreiben Sie uns direkt per E-Mail oder rufen Sie an. Wir melden uns in der Regel innerhalb von 48 Stunden.
-              </p>
-            </div>
           </div>
         </div>
       </div>
