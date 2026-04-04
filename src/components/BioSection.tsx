@@ -46,7 +46,7 @@ export default function BioSection() {
                 {/* Name overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="text-xl font-bold text-[#2F2A26] mb-0.5">{member.name}</h3>
-                  <p className="text-white text-sm font-semibold font-['Montserrat'] tracking-wide drop-shadow-md">
+                  <p className="text-[#2F2A26] text-sm font-semibold font-['Montserrat'] tracking-wide">
                     {member.role}
                   </p>
                 </div>
