@@ -194,7 +194,7 @@ export const REFERENCES = {
     {
       title: "Verlieben, verloren, vergessen, verzeih'n",
       show: "Schlagerchampions",
-      youtubeId: "wAksAUAN3WY",
+      youtubeId: "CJ5RlOgqlPA",
     },
     {
       title: "Medley (Wieder alles im Griff / Anita)",
