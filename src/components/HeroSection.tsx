@@ -43,10 +43,27 @@ export default function HeroSection() {
             event.target.setPlaybackQuality("hd2160");
             event.target.playVideo();
             setVideoReady(true);
+
+            // Dauerschleife sicherstellen: alle 3 Sekunden prüfen ob Video noch läuft
+            setInterval(() => {
+              try {
+                const state = event.target.getPlayerState();
+                // ENDED (0), PAUSED (2), CUED (5), UNSTARTED (-1) → neu starten
+                if (state === 0 || state === 2 || state === 5 || state === -1) {
+                  event.target.mute();
+                  if (state === 0) event.target.seekTo(4);
+                  event.target.playVideo();
+                }
+              } catch {}
+            }, 3000);
           },
           onStateChange: (event: any) => {
-            if (event.data === (window as any).YT.PlayerState.ENDED) {
+            const YT = (window as any).YT;
+            if (event.data === YT.PlayerState.ENDED) {
               event.target.seekTo(4);
+              event.target.playVideo();
+            } else if (event.data === YT.PlayerState.PAUSED) {
+              // Sofort wieder starten wenn pausiert
               event.target.playVideo();
             }
           },
