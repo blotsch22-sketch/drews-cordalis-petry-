@@ -7,6 +7,7 @@ import MusicSection from "./components/MusicSection";
 import ReferencesSection from "./components/ReferencesSection";
 import EventTypesSection from "./components/EventTypesSection";
 import BookingSection from "./components/BookingSection";
+import ImpressumSection from "./components/ImpressumSection";
 import Footer from "./components/Footer";
 import type { EventTypeValue } from "./data/content";
 
@@ -32,6 +33,7 @@ export default function App() {
         <ReferencesSection />
         <EventTypesSection onEventSelect={handleEventSelect} />
         <BookingSection selectedEventType={selectedEventType} onEventTypeChange={setSelectedEventType} />
+        <ImpressumSection />
       </main>
       <div className="relative z-10">
         <Footer />
