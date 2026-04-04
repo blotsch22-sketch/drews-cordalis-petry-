@@ -9,7 +9,6 @@ interface BookingProps {
 interface FormData {
   name: string;
   email: string;
-  phone: string;
   eventType: string;
   date: string;
   message: string;
@@ -19,7 +18,6 @@ interface FormData {
 const initialForm: FormData = {
   name: "",
   email: "",
-  phone: "",
   eventType: "",
   date: "",
   message: "",
@@ -123,19 +121,11 @@ export default function BookingSection({ selectedEventType = "", onEventTypeChan
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="phone" className="block text-xs font-semibold text-[#2F2A26]/45 mb-1.5 uppercase tracking-wider font-['Montserrat']">
-                      Telefon
-                    </label>
-                    <input id="phone" type="tel" value={form.phone} onChange={(e) => updateField("phone", e.target.value)} placeholder="+49 ..." className={inputClass("phone")} />
-                  </div>
-                  <div>
-                    <label htmlFor="date" className="block text-xs font-semibold text-[#2F2A26]/45 mb-1.5 uppercase tracking-wider font-['Montserrat']">
-                      Wunschtermin
-                    </label>
-                    <input id="date" type="date" value={form.date} onChange={(e) => updateField("date", e.target.value)} className={inputClass("date")} />
-                  </div>
+                <div>
+                  <label htmlFor="date" className="block text-xs font-semibold text-[#2F2A26]/45 mb-1.5 uppercase tracking-wider font-['Montserrat']">
+                    Wunschtermin
+                  </label>
+                  <input id="date" type="date" value={form.date} onChange={(e) => updateField("date", e.target.value)} className={inputClass("date")} />
                 </div>
 
                 <div>
