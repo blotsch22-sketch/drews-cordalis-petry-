@@ -99,7 +99,7 @@ export function CookieBanner() {
             <p className="text-xs text-[#2F2A26]/55 leading-relaxed">
               Diese Website nutzt technisch notwendige Cookies. Für eingebettete Inhalte von YouTube und Spotify
               benötigen wir Ihre Zustimmung, da diese Dienste Cookies setzen und Daten verarbeiten können.{" "}
-              <a href="#datenschutz" className="text-[#E97A6A] hover:underline">Mehr erfahren</a>
+              <a href="#/datenschutz" className="text-[#E97A6A] hover:underline">Mehr erfahren</a>
             </p>
           </div>
           <div className="flex gap-2 flex-shrink-0">
@@ -139,7 +139,7 @@ export function EmbedPlaceholder({ service, onAccept }: { service: string; onAcc
       </p>
       <p className="text-xs text-[#2F2A26]/50 mb-4 max-w-xs">
         Beim Laden werden Daten an {service} übermittelt und Cookies gesetzt.{" "}
-        <a href="#datenschutz" className="text-[#E97A6A] hover:underline">Datenschutzinfo</a>
+        <a href="#/datenschutz" className="text-[#E97A6A] hover:underline">Datenschutzinfo</a>
       </p>
       <button
         onClick={onAccept}

@@ -49,7 +49,7 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            onClick={(e) => { e.preventDefault(); window.location.hash = ""; window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className={`font-['Montserrat'] font-extrabold text-lg md:text-xl tracking-tight transition-colors ${
               isHeroArea ? "text-white hover:text-[#F2C14E]" : "text-[#2F2A26] hover:text-[#E97A6A]"
             }`}

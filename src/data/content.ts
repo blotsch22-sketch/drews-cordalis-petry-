@@ -262,7 +262,7 @@ export const FOOTER = {
     { platform: "YouTube", url: "https://youtube.com/@fiestarecordsmusic", icon: "youtube" },
   ],
   legalLinks: [
-    { label: "Impressum", href: "#impressum" },
-    { label: "Datenschutz", href: "#datenschutz" },
+    { label: "Impressum", href: "#/impressum" },
+    { label: "Datenschutz", href: "#/datenschutz" },
   ],
 };
